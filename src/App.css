@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;700&display=swap');
+
+
 .App {
   text-align: center;
+  height: 100%;
 }
 
 .App-logo {
@@ -37,21 +41,293 @@
   }
 }
 
-.navbar ul{
-  list-style-type:none;
-  overflow: hidden;
+body {
+  margin: 0px;
+  padding: 0px;
 }
 
-.navbar a {
-  text-decoration: none;
+/* .navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+
+h1 {
+  font-size: 18px;
+  color: #282c34;
+  font-family: 'Markazi text';
+}
+
+
+.navbar a img {
+  height: 66px;
+  width: 370px;
+}
+
+.navbar ul {
+  display: flex;
+  padding: 0px;
+  margin: 0px;
 }
 
 .navbar li {
-  float: left;
-  margin: 10px;
+  list-style: none;
 }
 
-.navbar {
-  display: flex;
-  justify-content: center;
+.navbar li a {
+  text-decoration: none;
+  padding: 1rem;
+  color: black;
+  font-size: 18px;
 }
+
+
+
+.navbar li :hover {
+  color: green;
+}
+
+
+.hamburger-button {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  justify-content: space-between;
+}
+
+
+
+
+.header section {
+color: #EDEFEE;
+padding: 10px 13%;
+position: relative;
+}
+
+
+h2 {
+  color: #F4CE14;
+  font-size: 64px;
+  font-family: 'Markazi text';
+}
+
+h3 {
+  font-size: 40px;
+  font-family: 'Markazi text';
+}
+
+.banner p{
+  font-size: 36px;
+  max-width: 520px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+button {
+  background-color: #F4CE14;
+  color: black;
+  padding: 14px 18px;
+  border: none;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media(max-width:768px) {
+  .navbar img {
+    height: 50px;
+   }
+   .hamburger-button img {
+    height: 20px;
+    padding-top: 20px;
+   } 
+  .hamburger-button{
+    display: flex;
+    cursor: pointer;
+  }
+  .navbar-links{
+    display: none;
+    width: 100%;
+  } 
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start; 
+    padding: 0px;
+    padding-top: 7px;
+  }
+  .navbar-links ul{
+    flex-direction: column;
+    width: 100%;
+    
+  }
+  .navbar-links li {
+    text-align: center;
+    margin-top: 0px;
+    display: flex; 
+    justify-content: center;
+    background-color: #495E57;
+  }
+  .navbar-links.active {
+    display: flex;   
+  }
+  .navbar-links li a {
+    color: whitesmoke;
+  }
+}  */
+
+/* New coding css */
+
+/* navbarMenu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 10%;
+  
+} */
+
+.active {
+  background-color: gainsboro;
+  border-radius: 16px;
+}
+.navbar-list {
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 10%;
+  display: flex;
+}
+
+navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  position: sticky;
+  top: 0;
+}
+
+.navbar-list li {
+  font-size: 33px;
+  font-family: 'Markazi text';
+  list-style: none;
+}
+/* 
+.navbar  ul {
+  display: flex;
+} */
+
+.navbar-list li a {
+  text-decoration: none;
+  color: black;
+  padding: 0.4rem;
+  margin: 0.4rem;
+  display: block;
+}
+
+.navbar-list :not(.active) :hover{
+  color: #495E57;
+}
+
+
+.navbar img{
+  height: 100px;
+}
+
+.hamburger-button {
+  position: absolute;
+  top: .75rem;
+  right: 0.5rem;
+  display: none;
+  justify-content: space-between;
+  width: 2.25rem;
+  flex-direction: column;
+}
+
+/* .bar {
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  margin: 5px 0;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 2rem;
+  right: 1.5rem;
+} */
+
+/* navbar .menu {
+  display: flex;
+  position: absolute;
+  top: 0.75rem;
+  right: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 2rem;
+  width: 2.25rem;
+}
+
+navbar .menu span {
+  height: 0.4rem;
+  width: 100%;
+  background-color: white;
+  border-radius: 0.2rem;
+} */
+
+
+@media(max-width:768px) {
+
+   .navbar img{
+    height: 60px;
+   }
+
+   .hamburger-button img {
+    height: 20px;
+    padding: 5px 0%;
+    justify-content: space-around;
+   } 
+
+  .hamburger-button{
+    display: flex;
+    cursor: pointer;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+   }
+   
+  .navbar-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar ul li {
+    width: 100%;
+    text-align: center;
+    background-color: #495E57;
+    color: whitesmoke;
+  }
+  
+  .active {
+    background-color: #F4CE14;
+    border-radius: 16px;
+    color: #495E57;
+  }
+
+  .navbar-list :not(.active) :hover{
+    color: #f1f6f4;
+  }
+
+  .navbar-list.visible {
+   display: flex;
+   position: absolute;
+   top:80px
+  }
+}  

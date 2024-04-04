@@ -1,8 +1,21 @@
-import Logo from './Image assets/Logo.jpg';
+import React from 'react';
+// import { Link } from 'react-router-dom';
+
 function Header() {
     return (
-        <header>
-              <img src={Logo} alt="little lemon logo" />
+        <header className="header">
+            {/* <section>
+                <div className="banner">
+                    <h2>Little lemon</h2>
+                    <h3>Chicago</h3>
+                    <p>We are family owned Mediterranean restaurant, focus on  traditional dishes with modern twists. </p>
+                
+                    <Link to="/BookingPage">
+                         <button className="button" aria-label='On Click'>Reserve a Table</button>
+                    </Link>   
+                    
+                </div>
+            </section> */}
         </header>
     );
 }
