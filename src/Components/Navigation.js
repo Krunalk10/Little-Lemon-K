@@ -2,7 +2,8 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import Logo from "../assets/Logo.svg";
 import Hamburger from '../assets/hamburger.svg';
-import Close from '../assets/close1.png'
+import Close from '../assets/close1.png';
+// import Header from './Sections/HeadingPages/Header';
 function Navigation() {
     
         const [navbarOpen, setNavbarOpen] = useState(false);
@@ -22,18 +23,20 @@ function Navigation() {
                <button className="hamburger-button" onClick={handleToggleMenu}>
                 <img src={navbarOpen ? Close : Hamburger} alt="Navigation Bar" />
                </button>
+
             <ul className={`navbar-list ${navbarOpen ? "visible" : ""}`} >
                 <li><NavLink  to="/home">Home</NavLink></li>
                 <li><NavLink  to="/about">About</NavLink></li>
                 <li><a href={require("../assets/menu2.jpg")} target="_blank" rel="noreferrer" > Menu </a></li>
-                <li><NavLink  to="/reservations">Reservations</NavLink></li>
+                <li><NavLink  to="/reservation">Reservations</NavLink></li>
                 <li><NavLink  to="/orderOnline">Order Online</NavLink></li>
                 <li><NavLink  to="/login">Login</NavLink></li>
+                
             </ul>
-           
-           
-            <nav />
+                     
+
         </navbar>
+        
     );
 }
 
