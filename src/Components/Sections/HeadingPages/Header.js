@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 // import HeroImage from '../../assets/food/foodk13.avif';
-import HeroImg from '../../../assets/food/foodk13.avif'
+import HeroImg from '../../../assets/food/cake.jpg'
 
 export const Header = () => {
 
@@ -20,10 +20,11 @@ export const Header = () => {
 
            
        
-        <section className='hero-image'>
+            <section className='hero-image'>
                 <img src={HeroImg} alt='Little Lemon best dish' />
             </section>
-            </article>
+            
+        </article>
     </header>
   )
 }

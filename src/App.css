@@ -63,7 +63,7 @@ navbar{
   justify-content: space-between;
   align-items: center;
   padding: 30px 16%;
-  position: sticky;
+  /* position: sticky; */
   top: 0;
 }
 
@@ -179,6 +179,244 @@ navbar{
   margin-left: 24%;
   margin-top: 150px;
 }
+
+.confirmation {
+  margin-left: 35%;
+}
+
+.testimonials {
+  display: grid;
+  padding-right: 19rem;
+  margin-bottom: 30px;
+  
+}
+
+.testimonials  h1, h2 {
+  margin-left: 19%;
+  text-align: center;
+  font-family: "Markazi text";
+  font-size: 45px;
+  color: #495e57;
+}
+
+.testimonials h2 {
+  margin-top: -14px;
+}
+
+.testimonials-cards {
+    display: grid;
+    grid-template-columns: repeat(3,3fr);
+    margin-left: 17rem;
+    margin-top: 20px;
+    gap: 22px;
+}
+
+.userImage {
+  height: 36px;
+  margin-left: 150px;
+  margin-top: 20px;
+}
+
+.user-name {
+  font-weight: 700;
+  margin-left: 130px;
+  color: whitesmoke;
+  margin-top: 5px;
+}
+
+.user-comments {
+  margin-bottom: 60px;
+  color: whitesmoke;
+  margin-top: 20px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.user {
+  background-color: #495e57;
+  border-radius: 10px;
+  width: 350px;
+}
+ /* .about { */
+  /* margin: 0px 270px 0px 273px; */
+  /* display: grid; */
+  /* grid-template-columns: repeat(2,1fr); */
+  /* background-color: #F4CE14; */
+/* } */
+/* 
+.about h1 {
+  font-size: 3rem;
+  color: #495E57;
+  font-family: "Markazi text";
+  margin-left: 17rem;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  color: #495E57;
+  font-family: "Markazi text";
+  margin-left: 17rem;
+  margin-top: -40px;
+}
+
+.about-text {
+  /* margin: 0px 84rem 0px 0px */
+  /* font-weight: 500; */
+  /* margin-top: -15px; */
+/* } */
+
+/* .text-image {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: left;
+  margin-left: 17rem;
+} */
+
+/* .about-image img{ */
+  /* height: 8%; */
+  /* border-radius: 16px; */
+  /* margin-left: -12rem; */
+/* } */
+
+/* .about-img1{
+  position: relative;
+  top: -5rem;
+  left: 20rem;
+} */ 
+
+
+.about {
+  background-color: #f4ce14;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1.25rem 5rem 2.5rem 5rem;
+  min-height: 22rem;
+  margin-bottom: -1rem;
+  grid-gap: 25vw;
+}
+
+.about h1 {
+  font-size: 3rem;
+  color: #495E57;
+  font-family: "Markazi text";
+  margin-left: 12rem;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  color: #495E57;
+  font-family: "Markazi text";
+  margin-left: -3rem;
+  margin-top: -55px;
+}
+
+.about-subtext {
+  margin-top: 2rem;
+}
+
+.double-image {
+  max-height: 18rem;
+  position: relative;
+  top: 4rem;
+  left: -4rem;
+}
+
+.double-image > img {
+  width: 40%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-1 {
+  position: relative;
+  top: 0;
+  left: -88px;
+}
+
+.about-2 {
+  position: absolute;
+  top: -3.5rem;
+  left: 5rem;
+}
+
+.about-text-image p {
+  color: black;
+  font-size: 16px;
+  margin-top: -24px;
+  margin-left: 200px;
+}
+
+.footer{
+  /* background-color: #495E57; */
+  background-color: #495e57c7;
+}
+
+.footer-logo {
+  margin-top: 30px;
+  /* height: 45%; */
+  width: 7%;
+  /* left: 12px; */
+  margin-left: 283px;
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: space-between;
+  color: whitesmoke;
+  margin-top:16px;
+  padding-bottom:30px;
+}
+
+.footer-social-handles{
+  margin-right: 300px;
+}
+
+
+
+.footer-menu navigation ul {
+  list-style-type: none; 
+  padding-left: 20px;
+}
+
+.footer-menu navigation ul li a{
+  text-decoration: none;
+  color: whitesmoke;
+}
+.footer-menu .footer-contact ul,
+.footer-menu .footer-social-handles ul {
+  list-style-type: none; 
+  padding-left: 9px;
+}
+
+.footer-menu .footer-contact ul li,
+.footer-menu .footer-social-handles ul li {
+  text-decoration: none; 
+  margin-bottom: 10px;
+}
+
+.footer-menu .footer-navigation ul li {
+  margin-bottom: 10px; 
+}
+
+.li-tittle {
+  font-weight: 700;
+}
+
+.footer-social-handles ul a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+/* .footer-menu .footer-contact ul li,
+.footer-menu .footer-social-handles ul li {
+  margin-bottom: 10px; 
+} */
+
+/* div navigation {
+  margin-left: 100px;
+  margin-top: 25px;
+} */
+
+
 /* .hero-image {
   max-height: 17rem;
   padding-left: 2rem;
@@ -235,8 +473,9 @@ navbar{
 }
 
 .special-food-menu article h2 {
-  font-size: 32px;
+  font-size: 45px;
   font-weight: bold;
+  margin-left: -2px;
 }
 
 .card {
@@ -255,6 +494,7 @@ navbar{
   width: 356px; */
   width: 100%;
   border-radius: 15px 15px 0px 0px;
+  height: 63%;
 }
 
 .food-price {
@@ -292,9 +532,9 @@ navbar{
 
     font-size: inherit;
     line-height: 1.5;
-    margin: 0px;
+    margin: 26px;
     text-align: left;
-    color: black;
+    color:lightslategray;
     max-width: 100%;
     padding: 0px 0px 0.4rem;
     transition: max-height 0.3s ease-in-out;
@@ -326,8 +566,10 @@ navbar{
 .food-item{
   /* height: 400px; */
   width: 350px;
-  background: #a9c8be;
+  /* background: #a9c8be; */
   border-radius: 8px;
+  height: 100%;
+  color: black;
 }
 
 /* Responsive for below 768px */

@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 
 export const BookingForm = () => {
   return (
@@ -32,7 +33,9 @@ export const BookingForm = () => {
             </select>
           </div>
 
-            <button type="submit" className='submit'> Book </button>
+           <NavLink to='/confirmation'>
+           <button type="submit" className='submit'> Book </button>
+            </NavLink> 
    </form>
     </div>
   )
