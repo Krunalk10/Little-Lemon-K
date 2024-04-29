@@ -848,9 +848,8 @@
 
 import React from 'react'
 import axios from "axios"; 
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-
 
 export const BookingForm = () => {
   const [firstName, setFirstName] = React.useState('');
@@ -873,10 +872,10 @@ export const BookingForm = () => {
   const [formErrors, setFormErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-
   const handleSubmit  =(e) => {
     e.preventDefault();
     setFormErrors(validate(formValues));
+    setIsSubmitting(true);
     
     const user = {
       "firstName": firstName,
@@ -891,14 +890,14 @@ export const BookingForm = () => {
       .then(res=>{
         console.log(res);
         console.log(res.data);
-        window.location = "/confirmation" 
+        // window.location = "/confirmation" 
       })
-      setIsSubmitting(true);
+      
   }
 
   useEffect (() => {
     console.log(formErrors)
-    if (Object.keys(formErrors).length === 0 && isSubmitting){
+    if ((Object.keys(formErrors).length === 0 ) && isSubmitting){
       console.log(formValues)
     }
   },[formErrors, isSubmitting, formValues]);
@@ -908,13 +907,15 @@ export const BookingForm = () => {
     
     if (!values.firstName) {
       errors.firstName = "First name is required";
-    }else if (!values.firstName < 2) {
+    }
+    else if (values.firstName.length < 3) {
       errors.firstName = "Too short"
     }
 
     if (!values.lastName) {
       errors.lastName = "Last name is required";
-    }else if (!values.firstName < 2) {
+    }
+    else if (values.lastName.length < 3) {
       errors.lastName = "Too short"
     }
 
@@ -950,7 +951,7 @@ export const BookingForm = () => {
      }
      if(event.target.name === 'date'){
        setDate(event.target.value)
-       setTime("")
+       setTime("Select Time")
      }
      if(event.target.name === 'time'){
        setTime(event.target.value)
@@ -968,7 +969,8 @@ export const BookingForm = () => {
 
   return (
     <div className='reservation'>
-        <form  className='reservation-form'>
+      {Object.keys(formErrors).length === 0  && isSubmitting ? (window.location = "/confirmation" ) : ""}
+        <form  className='reservation-form' onSubmit={handleSubmit}>
           <div className='reservation-form-input'>
           <label>First Name</label>
            <input
@@ -1021,10 +1023,9 @@ export const BookingForm = () => {
             <p className='error'>{formErrors.occasion}</p>
           </div>
 
-            {/* <button type="submit" className='submit' onClick={handleSubmit}> Book </button> */}
-            <NavLink to='/confirmation'>
+            {/* <NavLink to='/confirmation'> */}
             <button type="submit" className='submit' onClick={handleSubmit}> Book </button>
-             </NavLink> 
+             {/* </NavLink>  */}
    </form>
     </div>
   )
