@@ -1,5 +1,5 @@
 import './App.css';
-// import { Footer } from './Components/Footer';
+import { Footer } from './Components/Footer';
 // import { Header } from '../src/Components/Sections/HeadingPages/Header';
 import Navigation from './Components/Navigation'
 
@@ -15,7 +15,7 @@ function App() {
       {/* <Header /> */}
       <Routing />
       {/* <Specials /> */}
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
