@@ -13,13 +13,8 @@ function Navigation() {
         };
     return (
         <navbar className={`navbar ${navbarOpen ? "open" : ""}`}>
-            {/* {props.device === 'mobile' ? ("") : (<NavLink to="/"> <img src={Logo} alt="Little lemon logo" className="nav-image"/></NavLink> )} */}
             <NavLink to="/"><img src={Logo} alt="Little lemon logo" className="nav-image"/></NavLink>
-              {/* <div className="menu">
-                    <div className="bar"></div>
-                    <div className="bar"></div>
-                    <div className="bar"></div>
-              </div> */}
+             
                <button className="hamburger-button" onClick={handleToggleMenu}>
                 <img src={navbarOpen ? Close : Hamburger} alt="Navigation Bar" />
                </button>

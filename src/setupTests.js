@@ -1,9 +1,10 @@
 import '@testing-library/jest-dom';
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent,screen } from '@testing-library/react';
 import BookingForm from './Components/Sections/ReservationPage/BookingForm'; // Assuming the correct path to BookingForm
 import { initializeTimes, updateTimes } from './reducer';
-import { validateFirstName, validateLastName, validateDate, validateTime, validateGuests, validateOccasion } from './validationFunctions';
+import { validateFirstName, validateLastName, validateDate, validateTime, validateGuests, validateOccasion} from './validationFunctions';
+import { validate } from './path/to/validate';
 
 
 describe('initializeTimes', () => {
@@ -143,6 +144,57 @@ describe('Validation Functions', () => {
     test('returns false for invalid occasion', () => {
       const invalidOccasion = '';
       expect(validateOccasion(invalidOccasion)).toBe(false);
+    });
+  });
+});
+
+
+
+describe('BookingForm HTML5 Validations', () => {
+  it('should have the necessary HTML5 validation attributes', () => {
+    render(<BookingForm />);
+    
+    // Check firstName input for required, minLength, and maxLength attributes
+    const firstNameInput = screen.getByPlaceholderText('First Name');
+    expect(firstNameInput).toHaveAttribute('required');
+    expect(firstNameInput).toHaveAttribute('minLength', '3');
+    expect(firstNameInput).toHaveAttribute('maxLength', '12');
+
+    // Check guests input for min and max attributes
+    const guestsInput = screen.getByPlaceholderText('0');
+    expect(guestsInput).toHaveAttribute('required');
+    expect(guestsInput).toHaveAttribute('min', '1');
+    expect(guestsInput).toHaveAttribute('max', '10');
+  });
+});
+
+describe('validate function', () => {
+  it('should validate input correctly', () => {
+    const validValues = {
+      firstName: "John",
+      lastName: "Doe",
+      date: "2022-05-20",
+      time: "18:00",
+      guests: "5",
+      occasion: "Birthday"
+    };
+    const invalidValues = {
+      firstName: "Jo",
+      lastName: "",
+      date: "",
+      time: "",
+      guests: "",
+      occasion: ""
+    };
+
+    expect(validate(validValues)).toEqual({});
+    expect(validate(invalidValues)).toMatchObject({
+      firstName: "Too short",
+      lastName: "Last name is required",
+      date: "Date is required",
+      time: "Time is required",
+      guests: "Guest number is required",
+      occasion: "Occasion name is required",
     });
   });
 });

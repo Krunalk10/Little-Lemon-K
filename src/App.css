@@ -209,11 +209,10 @@ navbar{
 }
 
 .error {
-  color: red; /* Already set to red */
-  font-size: 12px; /* Fine-tuning the font size */
-  /* visibility: hidden; Hide by default */
-  display: block; /* Ensures it takes its own line */
-  margin-top: 4px; /* Adds a little space between the input and the message */
+  color: red;
+  font-size: 12px;
+  display: block; 
+  margin-top: 4px;
 }
 
 
@@ -272,52 +271,6 @@ navbar{
   border-radius: 10px;
   width: 350px;
 }
- /* .about { */
-  /* margin: 0px 270px 0px 273px; */
-  /* display: grid; */
-  /* grid-template-columns: repeat(2,1fr); */
-  /* background-color: #F4CE14; */
-/* } */
-/* 
-.about h1 {
-  font-size: 3rem;
-  color: #495E57;
-  font-family: "Markazi text";
-  margin-left: 17rem;
-}
-
-.about h2 {
-  font-size: 2.5rem;
-  color: #495E57;
-  font-family: "Markazi text";
-  margin-left: 17rem;
-  margin-top: -40px;
-}
-
-.about-text {
-  /* margin: 0px 84rem 0px 0px */
-  /* font-weight: 500; */
-  /* margin-top: -15px; */
-/* } */
-
-/* .text-image {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  text-align: left;
-  margin-left: 17rem;
-} */
-
-/* .about-image img{ */
-  /* height: 8%; */
-  /* border-radius: 16px; */
-  /* margin-left: -12rem; */
-/* } */
-
-/* .about-img1{
-  position: relative;
-  top: -5rem;
-  left: 20rem;
-} */ 
 
 
 .about {
@@ -441,26 +394,7 @@ navbar{
   text-decoration: none;
   color: whitesmoke;
 }
-/* .footer-menu .footer-contact ul li,
-.footer-menu .footer-social-handles ul li {
-  margin-bottom: 10px; 
-} */
 
-/* div navigation {
-  margin-left: 100px;
-  margin-top: 25px;
-} */
-
-
-/* .hero-image {
-  max-height: 17rem;
-  padding-left: 2rem;
-}
-
-.hero-image img {
-  height: 100%;
-  width: 100%;
-} */
 
 .hero-image{
   position: absolute;
@@ -553,19 +487,7 @@ navbar{
 }
 
 .food-description{
-  /* font-size: 16px;
-  line-height: 1.5; */
 
-  /* font-size: inherit;
-  line-height: 1.5;
-  margin: 0px;
-  text-align: left;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  color: rgb(105, 105, 105);
-  max-width: 56%;
-  padding: 0px 0px 0.4rem; */
 
     font-size: inherit;
     line-height: 1.5;
