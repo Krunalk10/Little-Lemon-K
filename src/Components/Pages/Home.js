@@ -13,8 +13,6 @@ export const Home = () => {
        <Specials />
        <Testimonial/>
        <About />
-      
-       
     </div>
   );
 }

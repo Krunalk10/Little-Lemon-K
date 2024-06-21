@@ -3,7 +3,6 @@
 
 import React from 'react'
 import axios from "axios"; 
-// import { NavLink } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 export const BookingForm = () => {
@@ -45,7 +44,6 @@ export const BookingForm = () => {
       .then(res=>{
         console.log(res);
         console.log(res.data);
-        // window.location = "/confirmation" 
       })
       
   }
@@ -127,6 +125,7 @@ export const BookingForm = () => {
       {Object.keys(formErrors).length === 0  && isSubmitting ? (window.location = "/confirmation" ) : ""}
         <form  className='reservation-form' onSubmit={handleSubmit}>
           <div className='reservation-form-input'>
+          <h3>Reservation Booking</h3>
           <label>First Name</label>
            <input
              type='text'
@@ -140,8 +139,7 @@ export const BookingForm = () => {
              onChange={(e) => { handleChange(e) }}
              className=''
              />
-             <p className='error'>{formErrors.firstName}</p>
-
+            <span> {formErrors.firstName}</span>
            <label>Last Name</label>
            <input
             type='text'
@@ -150,10 +148,12 @@ export const BookingForm = () => {
              name='lastName'
              onChange={(e) => { handleChange(e) }}
              />
-           <p className='error'>{formErrors.lastName}</p>
+           <span> {formErrors.lastName}</span>
+
             <label for="res-date">Choose date</label>
             <input type="date" id="res-date" value={formValues.date} name="date" onChange={(e) => { handleChange(e) }} />
-            <p className='error'>{formErrors.date}</p>
+            {/* <p className='error'>{formErrors.date}</p> */}
+            <span> {formErrors.date}</span>
             <label for="res-time">Choose time</label>
 
             <select id="res-time " value={formValues.time}  name='time'  onChange={(e) => { handleChange(e) }}>
@@ -165,23 +165,22 @@ export const BookingForm = () => {
                 <option>21:00</option>
                 <option>22:00</option>
             </select>
-            <p className='error'>{formErrors.time}</p>
+            <span> {formErrors.time}</span>
             <label for="guests">Number of guests</label>
             <input type="number" placeholder="0" required min="1" max="10" id="guests" name ='guests' value={formValues.guests} onChange={(e) => { handleChange(e) }} />
-            <p className='error'>{formErrors.guests}</p>
+            <span> {formErrors.guests}</span>
             <label for="occasion">Occasion</label>
             <select id="occasion" value={formValues.occasion}  name={"occasion"} onChange={handleChange}>
                 <option>Select Occasion</option>
                 <option>Birthday</option>
                 <option>Anniversary</option>
             </select>
-            <p className='error'>{formErrors.occasion}</p>
+            <span> {formErrors.occasion}</span>
           </div>
 
-            {/* <NavLink to='/confirmation'> */}
             <button type="submit" className='submit' onClick={handleSubmit}> Book </button>
-             {/* </NavLink>  */}
    </form>
+   
     </div>
   )
 }
